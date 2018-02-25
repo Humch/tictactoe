@@ -1,0 +1,18 @@
+html {
+    background-color: #17468A;
+}
+
+body {
+    background-color: rgb(0,0,0,0) !important;
+}
+
+button.icon {
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.game-case {
+    min-height: 120px !important;
+    min-width: 120px !important;
+}
+
