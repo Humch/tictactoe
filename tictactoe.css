@@ -16,3 +16,6 @@ button.icon {
     min-width: 120px !important;
 }
 
+.turn-row {
+    min-height: 70px !important;
+}
