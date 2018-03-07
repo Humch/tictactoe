@@ -22,8 +22,8 @@
         <div class="row">
             <div class="col">
                 <p class="text-center">
-                    <button type="button" class="btn btn-secondary rounded icon" data-toggle="modal" data-target="#start-modal"><i class="fas fa-play"></i> Start a game</button>
-                    <button type="button" class="btn btn-secondary rounded icon"><i class="fas fa-redo"></i> Restart</button>
+                    <button id="start-game" type="button" class="btn btn-secondary rounded icon" data-toggle="modal" data-target="#start-modal"><i class="fas fa-play"></i> Start a game</button>
+                    <button id="restart" type="button" class="btn btn-secondary rounded icon"><i class="fas fa-redo"></i> Restart</button>
                 </p>
             </div>
         </div>
@@ -31,7 +31,7 @@
             <div class="col-8">
                 <div id="player-turn" class="text-center alert alert-primary" role="alert" style="display: none;">Player's turn</div>
                 <div id="computer-turn" class="text-center alert alert-primary" role="alert" style="display: none;">Computer's turn</div>
-                <div id="end-game" class="text-center alert alert-success" role="alert">Victory !</div>
+                <div id="end-game" class="text-center alert" role="alert"></div>
             </div>
 
         </div>

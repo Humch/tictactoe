@@ -17,6 +17,9 @@ $(".symbol").click(function() {
                 otherSymbol = "times";
         }
         $('#start-modal').modal('hide');
+        var startButton = document.getElementById("start-game");
+        startButton.disabled = true;
+    
         playGame();
     });
 
@@ -141,6 +144,38 @@ function endTheGame(result) {
         $("#player-turn").hide(800);
         $("#computer-turn").hide(800);
         endGame = true;
-        
+        if (result == "victory") {
+            var alertStyle = "alert-success"
+            var alertText = "You win";
+        } else if (result == "lose") {
+            var alertStyle = "alert-danger"
+            var alertText = "You lose !!";
+        } else if (result == "equal") {
+            var alertStyle = "alert-warning"
+            var alertText = "Draw game !!";
+        }
+        var z = document.getElementById("end-game");
+        z.classList.add(alertStyle);
+        z.innerText = alertText;
         $("#end-game").show(800);
 }
+
+$("#restart").click(function() {
+    choosenSymbol = "";
+    otherSymbol = "";
+    playerTurn = false;
+    player = 0;
+    endGame = false;
+    boardGame = [0,0,0,0,0,0,0,0,0];
+    $("#player-turn").hide();
+    $("#computer-turn").hide();
+    $("#end-game").hide();
+    for (var i = 0; i< 9; i++) {
+        var gameCase = document.getElementById(i);
+        if (gameCase.firstChild) {
+            gameCase.removeChild(gameCase.firstChild);
+        }
+    }
+    var startButton = document.getElementById("start-game");
+    startButton.disabled = false;
+});
