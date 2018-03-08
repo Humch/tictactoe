@@ -19,3 +19,8 @@ button.icon {
 .turn-row {
     min-height: 70px !important;
 }
+
+.text-damion {
+    font-family: 'Damion', cursive;
+    color : white;
+}
